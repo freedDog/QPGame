@@ -1,0 +1,28 @@
+######################
+# 解决java产生文件
+######################
+*.class
+
+######################
+# 解决maven产生的文件
+######################
+target/
+**/target/
+######################
+# 解决各类编辑器自动产生的文件
+######################
+
+*.iml
+
+## Directory-based project format:
+.idea/
+.settings
+*.mf
+.project
+*.log
+.classpath
+
+# Package Files #
+*.jar
+*.war
+*.ear
