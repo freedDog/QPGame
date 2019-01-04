@@ -1,0 +1,9 @@
+{
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+	"$attribute.getName()":"${attribute.getCType()}[]"#else
+	"$attribute.getName()":"$attribute.getCType()"#end
+#if(${velocityCount}<${protoMessage.getAttributes().size()}),#end	#if($attribute.isAddAnnotation())// ${attribute.changeAnnotation()}
+#end
+#end
+}

@@ -1,0 +1,7 @@
+module text;
+
+// 服务器消息文本
+message TextMsg {
+	String text;		// 文本
+	short[] type;		// 类型(多种类型)
+}

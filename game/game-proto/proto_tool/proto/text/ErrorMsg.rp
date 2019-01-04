@@ -1,0 +1,7 @@
+module text;
+
+// 错误消息
+message ErrorMsg {
+	short code;		// 错误源
+	String msg;		// 消息
+}

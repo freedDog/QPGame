@@ -1,0 +1,8 @@
+{
+	"goldList":"ProductMsg[]",	// 金币列表
+	"diamondList":"ProductMsg[]",	// 钻石列表
+	"ugoldList":"ProductMsg[]",	// 悠币列表
+	"propList":"PropMsg[]",	// 道具列表
+	"vipList":"PropMsg[]",	// vip列表
+	"roleList":"PropMsg[]"	// 角色列表
+}

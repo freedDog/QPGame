@@ -1,0 +1,160 @@
+package $pkgPreFix.$protoMessage.getModule();
+
+import io.netty.buffer.ByteBuf;
+
+import java.nio.ByteBuffer;
+
+#if($protoMessage.hasArray())
+import java.util.ArrayList;
+import java.util.List;
+#end
+#foreach($impMessage in $protoMessage.getObjectMsgImportList())
+import $pkgPreFix.$impMessage.getFullName();
+#end
+import com.tgt.uu.msg.ByteBufferHelper;
+import com.tgt.uu.msg.RpMessage;
+
+public class $protoMessage.getMessageName() extends RpMessage {
+##=======================属性======================
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.isAddAnnotation())
+	// $attribute.annotation
+	private List<$attribute.getComplexType()> $attribute.getName() = new ArrayList<$attribute.getComplexType()>();
+#else
+	private List<$attribute.getComplexType()> $attribute.getName() = new ArrayList<$attribute.getComplexType()>();
+#end
+#else
+#if($attribute.isAddAnnotation())
+	// $attribute.annotation
+	private $attribute.getType() $attribute.getName();
+#else
+	private $attribute.getType() $attribute.getName();
+#end
+#end
+#end
+##=====================属性结束====================
+##
+##=======================get/set===================
+#foreach($attribute in $protoMessage.getAttributes())
+
+#if($attribute.isArray())
+	public List<$attribute.getComplexType()> get$attribute.getFirstUpperCaseName()() {
+		return $attribute.getName();
+	}
+		
+	public void add$attribute.getFirstUpperCaseName()($attribute.getType() value) {
+		this.${attribute.getName()}.add(value);
+	}
+		
+	public void addAll$attribute.getFirstUpperCaseName()(List<$attribute.getComplexType()> values) {
+		this.${attribute.getName()}.addAll(values);
+	}
+#else
+#if($attribute.isAddAnnotation())
+	/** $attribute.annotation */
+#end
+	public $attribute.getType() get$attribute.getFirstUpperCaseName()() {
+		return $attribute.getName();
+	}
+
+#if($attribute.isAddAnnotation())
+	/** $attribute.annotation */
+#end
+	public void set$attribute.getFirstUpperCaseName()($attribute.getType() value) {
+		this.${attribute.getName()} = value;
+	}
+#end
+#end
+##=====================get/set结束==================
+##
+##=======================序列化=====================
+
+	@Override
+	public void serialize(ByteBuf buffer) {
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==2)
+		ByteBufferHelper.putObjectArray(buffer, $attribute.getName());
+#else
+		ByteBufferHelper.put$attribute.getFirstUpperCaseTypeName()Array(buffer, $attribute.getName());
+#end
+#else
+#if($attribute.getJavaTypeStyle()==2)
+		ByteBufferHelper.putObject(buffer, $attribute.getName());
+#else
+		ByteBufferHelper.put$attribute.getFirstUpperCaseTypeName()(buffer, $attribute.getName());
+#end
+#end
+#end
+	}
+##======================序列化结束==================
+##
+##=======================反序列化===================
+
+	public static $protoMessage.getMessageName() deserialize(byte[] array) {
+		return deserialize(ByteBuffer.wrap(array));
+	}
+		
+	public static $protoMessage.getMessageName() deserialize(ByteBuffer buffer) {
+		$protoMessage.getMessageName() messageInstance = new $protoMessage.getMessageName()();
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==2)
+		int $attribute.getName()Size = ByteBufferHelper.getShort(buffer);
+		for (int i = 0; i < $attribute.getName()Size; i++) {
+			messageInstance.add$attribute.getFirstUpperCaseName()(${attribute.getType()}.deserialize(buffer));
+		}
+#else
+		ByteBufferHelper.read$attribute.getFirstUpperCaseTypeName()Array(buffer, messageInstance.$attribute.getName());
+#end
+#else
+#if($attribute.getJavaTypeStyle()==2)
+		if (buffer.getShort() > 0) {
+			messageInstance.$attribute.getName() = ${attribute.getType()}.deserialize(buffer);
+		}
+#else
+		messageInstance.$attribute.getName() = ByteBufferHelper.get$attribute.getFirstUpperCaseTypeName()(buffer);
+#end
+#end
+#end
+		return messageInstance;
+	}
+##=======================反序列化结束===============
+##
+##=======================长度计算===================
+
+	@Override
+	public int calcLength() {
+		int length = $protoMessage.calcBaseTypeLength();
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==0)
+		length += 2 + ${attribute.getName()}.size() * $attribute.getLength();
+#elseif($attribute.getJavaTypeStyle()==1)
+		length += ByteBufferHelper.calcStringArrayLength($attribute.getName());
+#else
+		length += ByteBufferHelper.calcObjectArrayLength($attribute.getName());
+#end
+#else
+#if($attribute.getJavaTypeStyle()==1)
+		length += ByteBufferHelper.calcStringLength($attribute.getName());
+#elseif($attribute.getJavaTypeStyle()==2)
+		length += ByteBufferHelper.calcObjectLength($attribute.getName());
+#end
+#end
+#end
+		return length;
+	}
+##===================长度计算结束===================
+		
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("${protoMessage.getMessageName()}[");
+#foreach($attribute in $protoMessage.getAttributes())
+		sb.append("$attribute.getName()=" + $attribute.getName() + ", ");
+#end
+		sb.append("]");
+		return sb.toString();
+	}
+}

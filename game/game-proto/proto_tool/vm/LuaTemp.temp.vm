@@ -1,0 +1,134 @@
+$protoMessage.getMessageName() = class("$protoMessage.getMessageName()")
+
+##=======================属性======================
+
+function $protoMessage.getMessageName():ctor()
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.isAddAnnotation())
+	$attribute.changeAnnotation()
+#end
+	self.$attribute.getName() = Vector.new()
+#else
+#if($attribute.isAddAnnotation())
+	$attribute.changeAnnotation()
+#end
+	self.$attribute.getName() = nil
+#end
+#end
+end
+##=====================属性结束====================
+##
+##=======================序列化=====================
+
+function $protoMessage.getMessageName():serialize()
+	local msg = cc.Message:create()
+	self:serialize1(msg)
+	return msg
+end
+
+function $protoMessage.getMessageName():serialize1(msg)
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==2)
+	msg:putShort(self.$attribute.getName():size())
+	for i = 0, self.$attribute.getName():size() - 1 do
+		self.$attribute.getName():get(i):serialize1(msg)
+	end
+#elseif($attribute.getJavaTypeStyle()==1)
+	msg:putShort(self.$attribute.getName():size())
+	for i = 0, self.$attribute.getName():size() - 1 do
+		msg:putString(self.$attribute.getName():get(i), string.len(self.$attribute.getName():get(i)))
+	end
+#else
+	msg:putShort(self.$attribute.getName():size())
+	for i = 0, self.$attribute.getName():size() - 1 do
+		msg:put$attribute.getFirstUpperCaseTypeName()(self.$attribute.getName():get(i))
+	end
+#end
+#else
+#if($attribute.getJavaTypeStyle()==2)
+	if self.$attribute.getName() ~= nil then
+		msg:putShort(1)
+		self.$attribute.getName():serialize1(msg)
+	else
+		msg:putShort(0)
+	end
+#elseif($attribute.getJavaTypeStyle()==1)
+	if self.$attribute.getName() ~= nil then
+		msg:putString(self.$attribute.getName(), string.len(self.$attribute.getName()))
+	else
+		msg:putString("", 0)
+	end
+#else
+	msg:put$attribute.getFirstUpperCaseTypeName()(self.$attribute.getName())
+#end
+#end
+#end
+end
+##======================序列化结束==================
+##
+##=======================反序列化===================
+
+function ${protoMessage.getMessageName()}.deserialize(msg)
+	local obj = Msg.${protoMessage.getMessageName()}.new()
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==2)
+	local $attribute.getName()Len = msg:getShort()
+	for i = 1, $attribute.getName()Len do
+		local _$attribute.getName() = Msg.${attribute.getType()}.deserialize(msg)
+		obj.$attribute.getName():add(_$attribute.getName())
+	end
+#else
+	local $attribute.getName()Len = msg:getShort()
+	for i = 1, $attribute.getName()Len do
+		local _$attribute.getName() = msg:get$attribute.getFirstUpperCaseTypeName()()
+		obj.$attribute.getName():add(_$attribute.getName())
+	end
+#end
+#else
+#if($attribute.getJavaTypeStyle()==2)
+	if msg:getShort() == 1 then
+		obj.$attribute.getName() = Msg.${attribute.getType()}.deserialize(msg)
+	end
+#else
+	obj.$attribute.getName() = msg:get$attribute.getFirstUpperCaseTypeName()()
+#end
+#end
+#end
+	return obj
+end
+##=======================反序列化结束===============
+##
+##=======================toString===================	
+	
+function $protoMessage.getMessageName():toString()
+	rhdebug("------------------$protoMessage.getMessageName() begin------------------")
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+#if($attribute.getJavaTypeStyle()==2)
+	rhdebug("$attribute.getName() len", self.$attribute.getName():size())
+	for i = 0, self.$attribute.getName():size() - 1 do
+		rhdebug("$attribute.getName()[", i, "] --------------------------------")
+		self.$attribute.getName():get(i):toString()
+	end
+#else
+	rhdebug("$attribute.getName() len", self.$attribute.getName():size())
+	for i = 0, self.$attribute.getName():size() - 1 do
+		rhdebug("$attribute.getName()[", i, "] : ", self.$attribute.getName():get(i))
+	end
+#end
+#else
+#if($attribute.getJavaTypeStyle()==2)
+	if self.$attribute.getName() then
+		self.$attribute.getName():toString()
+	end
+#else
+	rhdebug("$attribute.getName() : ", self.$attribute.getName())
+#end
+#end
+#end
+	rhdebug("-------------------$protoMessage.getMessageName() end-------------------")
+end
+##===================toString结束===================

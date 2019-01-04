@@ -1,0 +1,12 @@
+$protoMessage.getMessageName() =
+{
+#foreach($attribute in $protoMessage.getAttributes())
+#if($attribute.isArray())
+	$attribute.getName() = ${attribute.getCType()}[],	#if($attribute.isAddAnnotation()) -- ${attribute.changeAnnotation()}#end 
+#else
+	$attribute.getName() = $attribute.getCType(),	#if($attribute.isAddAnnotation()) -- ${attribute.changeAnnotation()}#end 
+#end
+
+#end
+
+}

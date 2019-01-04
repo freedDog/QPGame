@@ -1,0 +1,7 @@
+{
+	"Id":"int",	// 道具ID
+	"name":"string",	// 道具名称
+	"count":"long",	// 道具数量
+	"type":"int",	// 购买道具类型
+	"desc":"string"	// 道具描述
+}
