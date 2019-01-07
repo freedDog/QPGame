@@ -1,0 +1,6 @@
+module base;
+
+// Long消息
+message LongMsg {
+	long value;
+}

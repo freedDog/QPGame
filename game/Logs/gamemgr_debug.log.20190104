@@ -1,0 +1,121 @@
+
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:15:58[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:15:58[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:15:58[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:15:59[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:18:33[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:20:48[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:26:25[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:26:25[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:26:25[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:26:26[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功
+INFO 2019-01-04 18:37:02[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:37:02[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:37:02[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:37:02[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:37:03[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:78)
+system: WINDOWS
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:79)
+ip: 192.168.0.110
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:80)
+mac: E0-D5-5E-90-EE-7E
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:83)
+ServiceMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:86)
+NettyServiceMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:89)
+TimeMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.base.service.server.App.init(App.java:92)
+RedisMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:40)
+GameMgrChannelMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.cluster.GameMgrServer.init(GameMgrServer.java:44)
+GlobalConfigMgr初始化成功!
+INFO 2019-01-04 18:37:22[main] com.game.framework.framework.app.App.start(App.java:57)
+服务器启动成功

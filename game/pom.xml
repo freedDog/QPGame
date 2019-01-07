@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.fd</groupId>
@@ -26,7 +24,7 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 鏃ュ織 -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 日志 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -44,7 +42,7 @@
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
 			<!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin 
-				pom.xml 閰嶇疆鏂囦欢寮傚父鎶ラ敊鎻掍欢 -->
+				pom.xml 配置文件异常报错插件 -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -58,5 +56,19 @@
 		<module>game-cluster</module>
 		<module>game-base-service</module>
 		<module>game-entity</module>
-	</modules>
+    	<module>game-gate</module>
+    <module>game-base-server</module>
+  </modules>
+  <distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Releases Repository</name>
+			<url>http://127.0.0.1:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>snapshots</name>
+			<url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

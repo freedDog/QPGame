@@ -1,0 +1,6 @@
+module login;
+
+message LoginReqMsg  { 
+	long playerId;	//用户ID
+	String key;	//登陆key
+}

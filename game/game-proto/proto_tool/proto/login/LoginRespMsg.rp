@@ -1,0 +1,6 @@
+module login;
+
+message LoginRespMsg  { 
+	long playerId;	//用户ID
+	short state;	//登陆结果
+}

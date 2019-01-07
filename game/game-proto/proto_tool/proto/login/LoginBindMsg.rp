@@ -1,0 +1,9 @@
+module login;
+
+//绑定游客或者手机号码消息体
+message LoginBindMsg{
+		String platform;			//游戏平台
+		int type;					//游客还是账号 0:账号 1:游客
+		String modilePhone;			//绑定的手机号码
+		String password;			//密码
+}
