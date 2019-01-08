@@ -1,0 +1,8 @@
+module video;
+
+// 录像内容
+message VideoItemMsg {
+	int time; // 离开始距离时间
+	short code; // 消息码
+	byte[] data;	// 消息体
+}

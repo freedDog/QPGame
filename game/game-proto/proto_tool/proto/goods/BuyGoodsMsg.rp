@@ -1,0 +1,7 @@
+module goods;
+
+//实物信息
+message BuyGoodsMsg {
+	 int id; //架号
+	 int count;//数量
+}

@@ -1,0 +1,16 @@
+module goods;
+
+//实物信息
+message GoodsTempMsg {
+
+     int templateId; // 实物Id
+	 String name; // 实物名称
+	 int count;//库存
+	 int type; // 实物类型
+	 String desc; // 说明
+	 String icon;//图标
+	 String detailImage; // 详情图
+	 String showImage01; // 展示图01
+	 String showImage02; // 展示图02
+     
+}

@@ -1,0 +1,7 @@
+module room;
+import room.AccountResultMsg;
+
+// 结算结果
+message AccountResultListMsg {
+	AccountResultMsg[] result;	// 结果
+}

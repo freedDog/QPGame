@@ -1,0 +1,7 @@
+module goods;
+import goods.GoodsTempMsg;
+
+//实物信息
+message GoodsTempListMsg {
+	GoodsTempMsg[] goods;	// 实物模板
+}

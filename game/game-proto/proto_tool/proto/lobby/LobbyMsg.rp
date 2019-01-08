@@ -1,0 +1,16 @@
+module lobby;
+
+// 大厅数据
+message LobbyMsg {
+	int	id;		// 大厅Id
+	String name;	// 大厅名字
+	int playerCount;	// 当前玩家数量
+
+	int baseScore;	// 底分
+	int currencyId;		// 货币类型
+	int expend; // 每局消耗
+	int currencyLimitMin; // 资源最小限制
+	int currencyLimitMax; // 资源最大限制
+
+	int kindType;	// 大厅类型
+}

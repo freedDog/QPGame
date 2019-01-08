@@ -1,0 +1,10 @@
+module rank;
+import player.SimplePlayerMsg;
+
+//排行榜消息体
+message RankMsg{
+    long playerId;             //玩家ID
+    SimplePlayerMsg player;    //玩家状态数据
+    int rankIndex;             //排行名次
+    int[] rankVals;            //数值数组
+}

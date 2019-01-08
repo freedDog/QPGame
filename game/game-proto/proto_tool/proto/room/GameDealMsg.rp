@@ -1,0 +1,8 @@
+module room;
+
+// 游戏发牌消息
+message GameDealMsg {
+	long playerId;	// 玩家Id
+	int[] card;		// 牌
+	int[] landlordCard;	// 地主牌
+}

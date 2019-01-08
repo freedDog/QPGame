@@ -1,0 +1,14 @@
+module room;
+import room.GamePlayerMsg;
+import room.GameRoomMsg;
+import room.GameRoomTaskMsg;
+
+// 房间初始化数据
+message GameRoomInitMsg {
+	GameRoomMsg room;		// 房间信息
+	GamePlayerMsg[] player;	// 房间内玩家信息
+	GameRoomTaskMsg task;	// 房间任务
+
+	long lastPlayerId;		// 最后出牌的玩家Id
+	int[] lastCards;		// 最后出的牌
+}

@@ -1,0 +1,85 @@
+package $package;
+##检测参数是否带Param, 如果有引入转化数据.
+#foreach($field in $fields)
+#set($fieldName=${help.fristLower($field.name)})
+#set($isParamValue=${field.type.equals("String")}&&${fieldName.indexOf("param")}>=0)
+#if($isParamValue)
+##这里必须加一行
+
+import com.tgt.utils.DataUtils;
+#break
+#end
+#end
+
+public class $className
+{
+##遍历生成参数
+#foreach($field in $fields)
+#set($fieldName=${help.fristLower($field.name)})
+#set($isParamValue=${field.type.equals("String")}&&${fieldName.indexOf("param")}>=0)
+	private $field.type $fieldName; // $field.tag
+#if($isParamValue)
+	private int ${fieldName}_int; // ${field.tag}-整形数据
+#end
+#end
+#foreach($field in $fields)
+#set($fieldName=${help.fristLower($field.name)})
+#set($isParamValue=${field.type.equals("String")}&&${fieldName.indexOf("param")}>=0)
+
+	/** 获取$field.tag **/
+	public $field.type get${help.fristUpper($field.name)}()
+	{
+		return $fieldName;
+	}
+
+#if($isParamValue)
+	/** 设置$field.tag **/
+	public void set${help.fristUpper($field.name)}(Object $fieldName)
+	{
+		String pstr = ($fieldName != null) ? ${fieldName}.toString() : null;
+		if (this.$fieldName != null && this.${fieldName}.equals($fieldName))
+		{
+			return;
+		}
+		this.$fieldName = pstr;
+		this.${fieldName}_int = DataUtils.toInt(this.$fieldName);
+	}
+
+	/** 获取${field.tag}-整形参数 **/
+	public int get${help.fristUpper($field.name)}Int()
+	{
+		return this.${fieldName}_int;
+	}
+#else
+	/** 设置$field.tag **/
+	public void set${help.fristUpper($field.name)}($field.type $fieldName)
+	{
+#if(${field.isBaseType()})
+		if (this.$fieldName == $fieldName)
+#else 
+		if (this.$fieldName != null && this.${fieldName}.equals($fieldName))
+#end
+		{
+			return;
+		}
+		this.$fieldName = $fieldName;
+	}
+#end
+#end
+
+	@Override
+	public String toString()
+	{
+		StringBuilder strBdr = new StringBuilder();
+		strBdr.append("${className}[");
+#foreach($field in $fields)
+#set($fieldName=${help.fristLower($field.name)})
+#if($velocityCount != 1)
+		strBdr.append(",");
+#end
+		strBdr.append("$fieldName=").append($fieldName);
+#end
+		strBdr.append("]");
+		return strBdr.toString();
+	}
+}

@@ -7,7 +7,6 @@ import java.nio.ByteBuffer;
 import com.game.proto.msg.ByteBufferHelper;
 import com.game.proto.msg.RpMessage;
 
-
 public class ErrorMsg extends RpMessage {
 	// 错误源
 	private short code;

@@ -1,0 +1,7 @@
+module goods;
+import goods.GoodsCountMsg;
+
+//实物信息
+message GoodsCountListMsg {
+	 GoodsCountMsg[] listMsg;   //实物库存列表
+}

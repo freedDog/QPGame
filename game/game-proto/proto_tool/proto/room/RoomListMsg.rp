@@ -1,0 +1,7 @@
+module room;
+import room.RoomMsg;
+
+// 房间列表信息
+message RoomListMsg {
+	RoomMsg[]	room;	// 房间信息
+}

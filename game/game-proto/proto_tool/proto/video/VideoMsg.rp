@@ -1,0 +1,9 @@
+module video;
+import video.VideoItemMsg;
+
+// 录像内容
+message VideoMsg {
+	long recordId;			// 记录Id
+	int gameType;			// 游戏类型
+	VideoItemMsg[] item;	// 内容列表
+}

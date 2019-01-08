@@ -1,0 +1,11 @@
+module goods;
+
+//订单信息
+message AckOrderAddrMsg {
+     long   id;//订单号
+     String shippingAddress;//收货地址
+     String shippingName;//收货人
+     String shippingPhone;//收货人电话
+
+	 
+}

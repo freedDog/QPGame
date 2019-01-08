@@ -1,0 +1,7 @@
+module lobby;
+import lobby.LobbyMsg;
+
+// 大厅列表数据
+message LobbyListMsg {
+	LobbyMsg[]	lobby;	// 大厅数据
+}

@@ -1,0 +1,10 @@
+module room;
+import room.GamePlayerVoteMsg;
+
+// 房间投票信息
+message GameRoomVoteMsg {
+	int type;					// 投票类型
+	GamePlayerVoteMsg[] player;	// 各个玩家的状态
+	int timeOut;			// 截止时间
+	int defaultState;		// 截止默认状态, 1为默认赞成, 2为默认拒绝
+}

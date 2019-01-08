@@ -1,0 +1,9 @@
+module room;
+import room.GamePlayerVoteMsg;
+
+// 房间投票结果
+message GameRoomVoteResultMsg {
+	int type;					// 投票类型
+	GamePlayerVoteMsg[] player;	// 各个玩家的状态
+	boolean success;		// 是否成功
+}

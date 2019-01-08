@@ -1,0 +1,7 @@
+module room;
+
+// 切换房间
+message ChangeRoomMsg {
+	int	id;		// 房间大厅Id
+	long[]	filterIds;	// 过滤的房间Id
+}

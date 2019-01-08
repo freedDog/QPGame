@@ -1,0 +1,18 @@
+module room;
+
+// 房间数据
+message GameRoomMsg {
+	long	id;		// 房间Id
+	int type;		// 房间类型: 0斗地主
+	int state;		// 房间状态: 1准备阶段, 2开始, 3游戏进行中, 4结束, 5关闭
+	int gameState;	// 游戏状态
+
+	float	landlordDoubleRate;	// 底牌倍率
+	int[]	landlordCards;		// 地主牌(底牌)
+
+	int currencyId;		// 货币Id
+	int expend;			// 开局消耗货币
+
+	int lobbyId;		// 大厅模板Id
+	int kindType;			// 大厅类型(游戏类型)
+}

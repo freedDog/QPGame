@@ -1,0 +1,7 @@
+module room;
+
+// 房间数据
+message RoomMsg {
+	long	id;		// 房间Id
+	int type;	// 房间类型, 0斗地主
+}

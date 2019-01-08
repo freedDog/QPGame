@@ -1,0 +1,18 @@
+module room;
+
+// 结算结果
+message AccountResultMsg {
+	long	playerId;	// 玩家Id
+	boolean	isWin;		// 是否获胜
+	int		baseScore;	// 底分
+	float	doubleRate;	// 倍率
+	int		money;		// 金钱变化	
+	int		currencyId;	// 结算货币Id
+
+	int		moneyLimit;		// 限制, 0为正常, -1为不够扣, 1为封顶增加
+	boolean isDouble;		// 是否双倍
+	int taskRate;		// 任务加倍, 正常是0
+
+	int[] cards;	// 剩余的手牌
+	boolean isSpring;	// 是否春天啦
+}

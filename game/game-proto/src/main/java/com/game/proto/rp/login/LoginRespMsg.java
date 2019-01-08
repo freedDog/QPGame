@@ -7,7 +7,6 @@ import java.nio.ByteBuffer;
 import com.game.proto.msg.ByteBufferHelper;
 import com.game.proto.msg.RpMessage;
 
-
 public class LoginRespMsg extends RpMessage {
 	// 用户ID
 	private long playerId;

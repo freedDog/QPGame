@@ -1,0 +1,35 @@
+package $package;
+#set($infoClass=${help.fristUpper($baseName)} + "TempInfo")
+
+import java.util.List;
+
+import tsif.jdbc.annotation.DAO;
+import tsif.jdbc.annotation.ReturnGeneratedKeys;
+import tsif.jdbc.annotation.SQL;
+
+import $entity_package.${infoClass};
+
+#set($fristField=$fields.get(0))
+#set($fristFieldName=${help.fristLower($fristField.name)})
+#set($fristFieldType=$fristField.type)
+#foreach($field in $fields)#if(${field.name.equals("IsExist")})#set($hasExist=true)#end#end
+@DAO
+public interface $className {
+	static final String tableName = "t_s_$orderName";
+	static final String keys = "#foreach($field in $fields)#if($velocityCount != 1),#end`$field.name`#end";
+	static final String values = "#foreach($field in $fields)#if($velocityCount != 1),#end:1.$field.name#end";
+
+	@ReturnGeneratedKeys
+	@SQL("insert into `" + tableName + "` (" + keys + ") values(" + values + ") ")
+	<T extends ${infoClass}> long insert(T info);
+	
+	@ReturnGeneratedKeys
+	@SQL("replace into `" + tableName + "` (" + keys + ") values(" + values + ") ")
+	<T extends ${infoClass}> long insertOrUpdate(T info);
+	
+	@SQL("replace into `" + tableName + "` (" + keys + ") values(" + values + ") ")
+	<T extends ${infoClass}> int insertOrUpdate(List<T> info);
+	
+	@SQL("select " + keys + " from `" + tableName + "`#if($hasExist) where `IsExist`>0#{end}")
+	List<${infoClass}> getAll();
+}

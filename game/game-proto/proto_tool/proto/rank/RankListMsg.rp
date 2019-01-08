@@ -1,0 +1,9 @@
+module rank;
+import rank.RankMsg;
+
+//排行榜链表
+message RankListMsg{
+    int rankType;             //排行榜类型  1：赚钱榜  2：充值榜 3：夺宝榜 4：财富榜 5：钻石榜
+    RankMsg[] ranks;          //排行榜链表数据
+    RankMsg self;             //玩家的排行榜的数据
+}

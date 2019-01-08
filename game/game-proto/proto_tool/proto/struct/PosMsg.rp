@@ -1,0 +1,7 @@
+module struct;
+
+// 通用位置消息
+message PosMsg {
+	int x;
+	int y;
+}

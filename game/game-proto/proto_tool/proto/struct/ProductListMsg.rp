@@ -1,0 +1,7 @@
+module struct;
+import struct.ProductMsg;
+
+// 商品列表信息
+message ProductListMsg {
+	ProductMsg[] product; // 商品列表
+}

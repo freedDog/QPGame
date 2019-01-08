@@ -1,0 +1,9 @@
+module goods;
+import goods.GoodsTempMsg;
+
+//实物信息
+message ExchangeMsg {
+     int id;		//架号
+	 String expend;	//消耗
+	 GoodsTempMsg goods;	//实物模板
+}

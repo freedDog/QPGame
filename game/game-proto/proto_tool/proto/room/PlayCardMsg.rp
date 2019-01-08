@@ -1,0 +1,9 @@
+module room;
+
+// 玩家出牌消息
+message PlayCardMsg {
+	long	playerId;	// 玩家Id
+	int		nowCardCount;	// 当前牌数
+	int[]	card;		// 出的牌
+	int		cardType;	// 出的牌组成的类型
+}

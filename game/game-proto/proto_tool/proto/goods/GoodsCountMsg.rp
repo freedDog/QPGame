@@ -1,0 +1,7 @@
+module goods;
+
+//实物信息
+message GoodsCountMsg {
+	 int templateId; // 实物Id
+     int count;//实物库存
+}

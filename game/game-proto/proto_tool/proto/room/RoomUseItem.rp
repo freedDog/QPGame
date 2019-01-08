@@ -1,0 +1,7 @@
+module room;
+
+// 房间数据
+message RoomUseItem {
+	int itemId;	// 物品Id
+	int enable;	// 是否使用
+}

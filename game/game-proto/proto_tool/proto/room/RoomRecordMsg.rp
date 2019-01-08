@@ -1,0 +1,9 @@
+module room;
+
+// 结算结果
+message RoomRecordMsg {
+	int		score;		// 加分(加倍)
+	int		nowScore;	// 当前分数
+	int		type;		// 类型
+	int		target;		// 目标: 0本家, 1:下家, 2:对家, 3:上家
+}

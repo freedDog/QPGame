@@ -59,6 +59,10 @@
     	<module>game-gate</module>
     <module>game-base-server</module>
     <module>game-server</module>
+    <module>game-core</module>
+    <module>game-utils</module>
+    <module>game-control</module>
+    <module>game-room</module>
   </modules>
   <distributionManagement>
 		<repository>

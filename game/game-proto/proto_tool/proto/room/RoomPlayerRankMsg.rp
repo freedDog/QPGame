@@ -1,0 +1,9 @@
+module room;
+
+
+// 排名数据
+message RoomPlayerRankMsg {
+	long playerId;	// 玩家Id
+	int win;	// 胜场
+	int totalScore;	// 累计分数
+}

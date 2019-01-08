@@ -1,0 +1,8 @@
+module goods;
+
+//实物信息
+message GetGoodsListMsg {
+	 int type;	//实物类型
+	 int start;	//开始值
+	 int  last;  //结束值
+}

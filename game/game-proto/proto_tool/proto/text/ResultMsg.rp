@@ -1,0 +1,7 @@
+module text;
+
+// 结果消息
+message ResultMsg {
+	boolean result;		// 结果
+	String value;		// 消息
+}

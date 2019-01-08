@@ -1,0 +1,8 @@
+module goods;
+import goods.ExchangeMsg;
+
+//实物信息
+message ExchangeListMsg {
+ 	ExchangeMsg[] goodList; // 实物列表
+
+}

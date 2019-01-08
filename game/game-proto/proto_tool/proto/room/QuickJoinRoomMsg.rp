@@ -1,0 +1,10 @@
+module room;
+
+// 快速加入房间
+message QuickJoinRoomMsg {
+	int	id;		// 房间大厅Id
+	int mode;		//房间模式
+	int inner;		//局数 0:表示不是开房间 1:4局 2：8局 3：16局
+	int val;		//参数1
+	int[] vals;		//参数列表
+}

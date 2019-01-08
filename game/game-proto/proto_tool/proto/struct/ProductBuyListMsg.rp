@@ -1,0 +1,9 @@
+module struct;
+import struct.ProductMsg;
+
+//商店购买商品消息
+message ProductBuyListMsg{
+	ProductMsg[] product; 		// 商品列表
+	ProductMsg[] vip;			// vip商品列表
+	ProductMsg[] activity;   //活动奖励列表
+}

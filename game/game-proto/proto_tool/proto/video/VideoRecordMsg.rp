@@ -1,0 +1,10 @@
+module video;
+import video.VideoPlayerInfoMsg;
+
+// 录像数据
+message VideoRecordMsg {
+	long recordId;				// 记录Id
+	int gameType;				// 游戏类型
+	VideoPlayerInfoMsg[] info;	// 玩家信息
+	int recordTime;			// 记录时间戳
+}

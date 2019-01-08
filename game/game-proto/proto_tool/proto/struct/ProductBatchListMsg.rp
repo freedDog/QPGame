@@ -1,0 +1,7 @@
+module struct;
+import struct.ProductListMsg;
+
+// 商品批量消息
+message ProductBatchListMsg {
+	ProductListMsg[] product;	// 列表信息
+}

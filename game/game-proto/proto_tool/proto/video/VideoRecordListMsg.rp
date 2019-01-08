@@ -1,0 +1,7 @@
+module video;
+import video.VideoRecordMsg;
+
+// 录像数据
+message VideoRecordListMsg {
+	VideoRecordMsg[] record; // 记录
+}

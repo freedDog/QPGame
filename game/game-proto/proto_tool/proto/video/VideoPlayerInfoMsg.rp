@@ -1,0 +1,11 @@
+module video;
+
+// 玩家信息
+message VideoPlayerInfoMsg {
+	long playerId;	// 玩家Id
+	String name;	// 玩家名
+	String icon;	// 头像
+	int score;		// 分数
+	int totalScore;	// 总分
+	int fashionId;	// 形象模板
+ }

@@ -1,0 +1,15 @@
+module player;
+import exploit.ExploitMsg;
+
+// 简化玩家消息
+message SimplePlayerMsg  {
+	long playerId;	// 用户ID
+	String name;	// 玩家名
+	short sex;		// 性别
+	int level;	// 等级
+	int vip; // VIP等级
+	int titleId;	// 称号模板
+	int fashionId;	// 形象模板
+	ExploitMsg[] exploits;     //战绩模板
+	String headImgUrl;       //玩家头像
+}

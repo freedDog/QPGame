@@ -21,6 +21,16 @@
 			<artifactId>game-framework</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+				<dependency>
+			<groupId>com.fd</groupId>
+			<artifactId>game-utils</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+						<dependency>
+			<groupId>com.fd</groupId>
+			<artifactId>game-proto</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

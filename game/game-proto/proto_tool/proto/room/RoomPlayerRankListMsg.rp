@@ -1,0 +1,9 @@
+module room;
+import room.RoomPlayerRankMsg;
+
+// 排名数据
+message RoomPlayerRankListMsg {
+	long roomId;					//房间ID
+	int gameType;				//游戏类型
+	RoomPlayerRankMsg[] rank;	// 排名数据
+}

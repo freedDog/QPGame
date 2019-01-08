@@ -14,9 +14,12 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
+
 /**
  * 加密工具
- * 
+ * EncryptUtils.java
+ * @author JiangBangMing
+ * 2019年1月8日下午3:08:56
  */
 public class EncryptUtils {
 

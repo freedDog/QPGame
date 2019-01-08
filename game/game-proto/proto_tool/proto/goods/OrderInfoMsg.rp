@@ -1,0 +1,6 @@
+module goods;
+
+message OrderInfoMsg {
+	long orderId;		// 订单Id
+	String extData;		// 额外数据
+}

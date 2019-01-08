@@ -1,0 +1,26 @@
+module goods;
+import goods.GoodsTempMsg;
+
+//订单信息
+message GoodsOrderMsg {
+     long   id;//订单号
+     long orderSourceId;//订单来源
+     GoodsTempMsg good;//实物
+     int       count;//数量
+     String desc;//备注
+     String shippingAddress;//收货地址
+     String shippingName;//收货人
+     String shippingPhone;//收货人电话
+     String expend;//花费
+     short State;//订单状态
+     String startTime; // 创建时间
+     String ackTime; // 确认地址的时间
+     String sendTime; // 发货的时间
+     String doneTime; // 收货的时间
+     String showTime; // 晒单时间
+     String trackingNumber;//运单号
+     String trackingName; // 物流公司
+     String orderDesc;//订单描述
+     int orderType;//订单类型
+	 
+}

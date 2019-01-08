@@ -1,0 +1,7 @@
+module room;
+
+// 玩家投票状态
+message GamePlayerVoteMsg {
+	long playerId;	// 玩家
+	int state;		// 0:未操作 -1: 拒绝 1:同意
+}

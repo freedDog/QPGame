@@ -1,0 +1,22 @@
+module room;
+import player.SimplePlayerMsg;
+
+// 游戏房间玩家数据
+message GamePlayerMsg {
+	SimplePlayerMsg info;	// 玩家基本信息
+	boolean	prepare;		// 是否准备
+	boolean	landlord;		// 是否是地主
+	int cardNum;			// 手上牌数
+	int seat;				// 座位号, 0~2, -1为没座位
+
+	boolean showCard;		// 是否明牌
+	boolean deposit;		// 是否托管
+
+	int currencyId;		// 货币Id
+	int currencyValue;	// 当前货币数量
+	
+	int scoreRate;			// 分数倍率
+	int maxGetCount;	// 胜利获取封顶
+
+	int[] useItemIds;	// 使用的道具Id
+}

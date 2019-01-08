@@ -1,0 +1,21 @@
+package $package;
+
+import java.util.List;
+
+import tsif.jdbc.annotation.DAO;
+import tsif.jdbc.annotation.SQL;
+
+import $entity_package.${help.fristUpper($baseName)}TempInfo;
+
+#set($fristField=$fields.get(0))
+#set($fristFieldName=${help.fristLower($fristField.name)})
+#foreach($field in $fields)#if(${field.name.equals("IsExist")})#set($hasExist=true)#end#end
+@DAO
+public interface $className
+{
+	static final String tableName = "t_s_$orderName";
+	static final String keys = "#foreach($field in $fields)#if($velocityCount != 1),#end`$field.name`#end";
+
+	@SQL("select " + keys + " from `" + tableName + "`#if($hasExist) where `IsExist`>0#{end}")
+	List<${help.fristUpper($baseName)}TempInfo> getAll();
+}

@@ -1,0 +1,8 @@
+module goods;
+
+// 创建订单
+message CreateOrderMsg {
+	String platform;	// 客户端平台
+	int goodsId;		// 模板Id
+	String extData;		// 额外数据
+}

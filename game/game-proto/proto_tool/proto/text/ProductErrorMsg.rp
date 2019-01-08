@@ -1,0 +1,8 @@
+module text;
+
+// 产品不足消息
+message ProductErrorMsg {
+	int type;		// 产品类型
+	int id;		// 产品Id
+	long count;	// 所需数量
+}

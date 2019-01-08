@@ -1,0 +1,12 @@
+module room;
+import room.GamePlayerMsg;
+
+// 游戏事件消息
+message GamePlayerEventMsg {
+	long playerId;	// 玩家Id
+	int type;	// 事件类型, 1进入房间, 2离开房间, 3叫地主.
+	GamePlayerMsg info;	// 玩家信息, 根据消息类型有些类型事件没有
+	int intVal;		// 额外整形参数
+	int[] intVals;	// 额外整形列表参数
+	int cdTime;	// 倒计时, 0为没有(不过也不可能)
+}

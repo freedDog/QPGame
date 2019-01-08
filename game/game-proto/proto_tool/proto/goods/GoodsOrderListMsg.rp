@@ -1,0 +1,9 @@
+module goods;
+import goods.GoodsOrderMsg;
+
+//实物信息
+message GoodsOrderListMsg {
+    GoodsOrderMsg[]   orderList;//订单列表
+    long[]	           	removeId;	// 删除的Id(更新删除的)
+	boolean all;		// 是否是全部订单信息
+}

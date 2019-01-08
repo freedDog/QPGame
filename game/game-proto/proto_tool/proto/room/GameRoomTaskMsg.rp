@@ -1,0 +1,9 @@
+module room;
+
+// 房间任务
+message GameRoomTaskMsg {
+	int type;	// 任务类型, 1最后出的手牌类型
+	int cardType;	// 牌型
+	int cardNum;	// 牌值
+	int rate;	// 完成倍率
+}

@@ -1,0 +1,10 @@
+module room;
+
+// 游戏聊天
+message GameChatMsg {
+	int		type;		// 聊天类型, 1为聊天, 2为表情
+	int		chatId;		// 模板Id
+	String	text;		// 文本消息
+	long	playerId;	// 发送的玩家Id
+	long	targetId;	// 目标玩家Id
+}
