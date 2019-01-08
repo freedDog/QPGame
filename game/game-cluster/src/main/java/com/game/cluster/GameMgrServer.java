@@ -81,7 +81,7 @@ public class GameMgrServer extends App {
 
 	public static void main(String[] args) throws Exception {
 		if (args == null || args.length <= 0) {
-			args = new String[] { "config/servers.xml", "gamemgr" };
+			args = new String[] { "config_local/servers.xml", "gamemgr" };
 		}
 		// 启动
 		GameMgrServer server = new GameMgrServer();

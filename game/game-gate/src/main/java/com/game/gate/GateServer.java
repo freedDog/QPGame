@@ -86,7 +86,7 @@ public class GateServer extends GameApp {
 
 	public static void main(String[] args) throws Exception {
 		if (args == null || args.length <= 0) {
-			args = new String[] { "../Lib/config/servers.xml", "gate1" };
+			args = new String[] { "config_loacl/servers.xml", "gate1" };
 		}
 
 		// 启动

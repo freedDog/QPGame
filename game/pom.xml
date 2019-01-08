@@ -24,7 +24,7 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 日志 -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 ??? -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -42,7 +42,7 @@
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
 			<!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin 
-				pom.xml 配置文件异常报错插件 -->
+				pom.xml ??????????????? -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -58,6 +58,7 @@
 		<module>game-entity</module>
     	<module>game-gate</module>
     <module>game-base-server</module>
+    <module>game-server</module>
   </modules>
   <distributionManagement>
 		<repository>

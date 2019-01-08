@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Servers>
+	<Games>
+		<Game id="1001" name="game1" host="" port="10001">
+			<Module class="com.tgt.uu.core.CoreModule" robet="true" />
+			<Module class="com.tgt.uu.control.ControlModule" />
+			<Module class="com.tgt.uu.room.RoomModule" roomTest="false" />
+			<Module class="com.tgt.uu.guild.GuildModule" />
+			<Module class="com.tgt.uu.lhd.LHDModule" />
+		</Game>
+
+	<!-- 	<Game id="1002" name="game2" host="" port="10002">
+			<Module class="com.tgt.uu.core.CoreModule" />
+		</Game>
+
+		<Game id="1003" name="game3" host="" port="10003">
+			<Module class="com.tgt.uu.core.CoreModule" />
+		</Game> -->
+	</Games>
+
+	<Gates>
+		<HttpFilter url="gate/" ip="*" />
+		<HttpFilter url="core/gm/" ip="*" />
+
+		<Gate id="2001" name="gate1" host="" port="12001" httpport="9080" />
+		<!-- <Gate id="2002" name="gate2" host="" port="12002" httpport="9081" /> -->
+
+	</Gates>
+
+	<GameManager id="1" name="gamemgr" host="" port="10000">
+		<!-- DB数据库路由表 -->
+		<DBA dbName="db_xsg_game" host="192.168.0.240" port="3306"
+			username="qpadmin" password="xsg2018" />
+		<LogDBA dbName="db_xsg_log" host="192.168.0.240" port="3306"
+			username="qpadmin" password="xsg2018" />
+		<WebDBA dbName="db_xsg_web" host="192.168.0.240" port="3306"
+			username="qpadmin" password="xsg2018" />
+		<!-- Redis -->
+		<Redis host="127.0.0.1" port="6379" auth="123456" />
+	</GameManager>
+
+	<Global debug="true">
+		<Language language="zh" />
+		<Log path="../Logs/" />
+		<OpLog path="../OpLogs/" />
+		<!-- 房间日志级别  0all,1debug,2info,3warn,4error -->
+		<RoomLog level="0" console="true"/>
+
+		<Configuration folders="../Lib/config/configuration"
+			zips="../Lib/config/configuration.zip" />
+		<KeyGenerate tempFile="../keytemp/"/>
+		<Login encryptkey="DiHERMvbbHSE3rEtf5eZJS2L44FkJW" url="http://192.168.0.240:8088/Login" />
+		<GM encryptkey="VzliMBv2b^mKPjziU^PKEJ@jze7m$y@a" />
+		<!-- 代理记录 信息 -->
+		<Agency encryptkey="DiHERMvbbHSE3rEtf5eZJS2L44FkJW" url="http://192.168.0.101:9405" />
+		<!--encryptkey 游戏服与充值服之间通信的秘钥  -->
+		<!--url 充值地址 一般为内网访问地址  -->
+		<!--testPay 测试支付模式  -->
+		<!--serverId 可不填写  -->
+		<!--callBackUrl  可不填 充值服地址(一般为内网访问地址)  -->
+		<!--callbackHost 可不填充值服回调的网关IP  -->
+		<!--callbackPort 必填 充值服回调的网关端口  -->
+		<Pay encryptkey="#ZaPY7%VG9#1!HUfgXTAg@aeFLe*W#ey" url="http://192.168.0.240:8088/Login"
+			testPay="true" serverId="" callBackUrl="" callbackHost=""
+			callbackPort="9080" />
+
+		<!-- <SMSSdk appkey="ce0b99deb7d3991855ca0c3e8c23988a" appsecret="b07b4e19ec65"
+			sendcode="https://api.netease.im/sms/sendcode.action " verifycode="https://api.netease.im/sms/verifycode.action " />
+		<SMSSdk appkey="ce0b99deb7d3991855ca0c3e8c23988a" appsecret="b07b4e19ec65"
+			sendcode="https://api.netease.im/sms/sendcode.action" verifycode="https://api.netease.im/sms/verifycode.action" />
+ 		-->
+	</Global>
+
+</Servers>
