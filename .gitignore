@@ -13,13 +13,15 @@ target/
 ######################
 
 *.iml
+**/Logs/
+**/log/
 
 ## Directory-based project format:
 .idea/
 .settings
 *.mf
 .project
-*.log
+*.l
 .classpath
 
 # Package Files #

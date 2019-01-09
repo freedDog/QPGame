@@ -5,7 +5,6 @@ import com.game.base.service.mgr.CountMgr;
 import com.game.base.service.module.Module;
 import com.game.base.service.module.ModuleName;
 import com.game.base.service.server.App;
-import com.game.base.service.tempmgr.GoodsTempMgr;
 import com.game.framework.framework.xml.XmlNode;
 
 /**

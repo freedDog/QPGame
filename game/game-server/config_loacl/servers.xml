@@ -3,11 +3,9 @@
 <Servers>
 	<Games>
 		<Game id="1001" name="game1" host="" port="10001">
-			<Module class="com.tgt.uu.core.CoreModule" robet="true" />
-			<Module class="com.tgt.uu.control.ControlModule" />
-			<Module class="com.tgt.uu.room.RoomModule" roomTest="false" />
-			<Module class="com.tgt.uu.guild.GuildModule" />
-			<Module class="com.tgt.uu.lhd.LHDModule" />
+			<Module class="com.game.core.CoreModule" robet="true" />
+			<Module class="com.game.control.ControlModule" />
+			<Module class="com.game.room.RoomModule" roomTest="false" />
 		</Game>
 
 	<!-- 	<Game id="1002" name="game2" host="" port="10002">
